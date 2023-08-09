@@ -1,7 +1,7 @@
+import Navbar from '../Navbar'
 import './index.css'
 
-const Home=()=>(
-    <h1>HEllo world</h1>
-)
+const Home=()=>
+    <Navbar/>
 
 export default Home    
