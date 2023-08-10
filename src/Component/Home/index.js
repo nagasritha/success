@@ -74,6 +74,22 @@ const firstCardsList=[
   {id:'card6', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297513/card6_uoqezh.png'},
 
 ]
+const specialCardsList=[
+  {id:'item1', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297752/short13_bob8ia.png'},
+  {id:'item2', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297732/short12_gpiyvw.png'},
+  {id:'item3', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297716/short11_izfb4w.png'},
+  {id:'item4', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297700/short10_pfpjlg.png'},
+  {id:'item5', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297684/short9_jbrf1y.png'},
+  {id:'item6', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297669/short8_bdksya.png'},
+  {id:'item7', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297653/short7_fuki4l.png'},
+  {id:'item8', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297637/short6_dhlp74.png'},
+  {id:'item9', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297619/short5_ndjxg2.png'},
+  {id:'item10', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297604/short4_bgi6u6.png'},
+  {id:'item11', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297584/short3_isean5.png'},
+  {id:'item12', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297562/short2_skz1fs.png'},
+  {id:'item13', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297538/short1_zyhclz.png'},
+
+]
 const cardList=[
     {url:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690347293/step1_iujeon.png',
      h1:'Web Development',
@@ -155,39 +171,40 @@ color:'#8048ab'}
 ]
 const iconsList=[
   {color:'#40cef5',
+   id:'icon1',
    icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379341/icon1_jaul9d.png',
    text:'Social Media'},
-   {color:'#fccc6a',
+   {color:'#fccc6a',id:'icon2',
    icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379347/icon22_d8wcod.png',
    text:'Manufacturing Industry'},
-   {color:'#93f3fa',
+   {color:'#93f3fa',id:'icon3',
    icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379352/icon33_r1w1rx.png',
    text:'Online Shopping'},
-   {color:'#d4995f',
+   {color:'#d4995f',id:'icon4',
    icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379358/icon44_bka9g4.png',
    text:'Dental Health Care'},
-   {color:'#d7fa75',
+   {color:'#d7fa75',id:'icon5',
    icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379363/icon55_xbhzx4.png',
    text:'Hospitality'},
-   {color:'#f59dbe',
+   {color:'#f59dbe',id:'icon6',
    icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379373/icon66_io3oq6.png',
    text:'Enterprise Service'},
-   {color:'#f59def',
+   {color:'#f59def',id:'icon7',
    icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379383/icon77_cbsafk.png',
    text:'Educational Industry'},
-   {color:'#c99df5',
+   {color:'#c99df5',id:'icon8',
    icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379390/icon88_uwz6ts.png',
    text:'Corporate & Enterprise'},
-   {color:'#9dc0f5',
+   {color:'#9dc0f5',id:'icon9',
    icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379397/icon99_kpnjyv.png',
    text:'Health Care'},
-   {color:'#9de8f5',
+   {color:'#9de8f5',id:'icon10',
    icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379406/icon10_m2k9hf.png',
    text:'Event Management'},
-   {color:'#e0bf9f',
+   {color:'#e0bf9f',id:'icon11',
    icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379412/icon11_kdyyvs.png',
    text:'Food & Restaurant'},
-   {color:'#93f3fa',
+   {color:'#93f3fa',id:'icon12',
    icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379420/icon12_ijfdqq.png',
    text:'Consultancy'},
    
@@ -251,13 +268,16 @@ render(){
    <div>
     <div id='section1'>
     <div className='blue-container'>
-    <div className='first'>
-        <h1 className='first-title'>WEBSITE GRAPHICS MARKETING APPLICATION</h1>
-        <p className='first-para'>Digital IT Sollutions for Transforming and innovating Businesses.</p>
-        <button type='button' className='first-but'>View Portfolio <span>&gt;</span></button>
-    </div>
-    <MoveBar classValue='marquee-container1' list={firstCardsList}/>
-    </div>
+      
+        <div className='first'>
+            <h1 className='first-title'>WEBSITE GRAPHICS MARKETING APPLICATION</h1>
+            <p className='first-para'>Digital IT Sollutions for Transforming and innovating Businesses.</p>
+            <button type='button' className='first-but'>View Portfolio <span>&gt;</span></button>
+        </div>
+        <MoveBar classValue='marquee-container1' list={firstCardsList}/>
+      </div>
+      <div className='bg-voilet-color'><MoveBar classValue='marquee-container2' list={specialCardsList}/></div>
+   
     </div>
     <div id='section2'>
     <div className='flex'>
@@ -340,7 +360,7 @@ render(){
           <p className='part2-para'>Successfully delivered digital products and solutions to a wide variety of industries.</p>
         </div>
         <div className='sec-card-container wrap2'>
-          {iconsList.map(item=><IconsData key={item.color} value={item}/>)}
+          {iconsList.map(item=><IconsData key={item.id} value={item}/>)}
         </div>
       </div>
       <div className='addPadding color-blue align-center' style={{display:'flex',flexWrap:'wrap',justifyContent:'center'}}>
@@ -378,6 +398,7 @@ render(){
           <h1 className='buttonType'>Webingo was featured on</h1>
           <img src='https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690443126/announcement_a1v4n9.png' className='toggle' alt='toggle'/>
         </div>
+        <MoveBar classValue='marquee-container3' list={specialCardsList}/>
       </div>
       <div className='column-style'>
            <p className='firAni'>LET’S BUILD SOMETHING TOGETHER</p>

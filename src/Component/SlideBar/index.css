@@ -1,4 +1,4 @@
-.inlineblockk{
+  .inlineblockk{
     padding:11px;
   }
   .marquee-container1{
@@ -15,6 +15,7 @@
     height: 150px;
     background-color:#150240;
     padding:20px;
+    margin-top:-10px;
   }
   .marquee-container3{
     overflow: hidden;
@@ -28,6 +29,7 @@
   .marquee-content {
     position: absolute;
     white-space: nowrap;
+    margin:0px;
     animation: marquee 10s linear infinite; 
   }
   
