@@ -195,6 +195,7 @@ margin:0px;
     border-right: 2px solid transparent; 
     opacity: 0; 
     animation: entrance 3s forwards;
+    animation-delay:4s;
     margin-left:10px;
     margin-bottom:15px;
     padding:25px;
@@ -354,6 +355,20 @@ margin:0px;
     flex-direction:column;
     justify-content: center;
     align-items: center;
+    animation: zoom-in;
+    animation-duration: 2s;
+    animation-delay: 7s;
+}
+@keyframes zoom-in {
+    0%{
+        transform: scale(1,0);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+.diffStyle:hover{
+    transform: skew(10deg,0);
 }
 .lastIcon{
     background-color: #ffffff;

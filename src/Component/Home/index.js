@@ -52,6 +52,14 @@ const FourthCardStyle=(props)=>{
     </div>
   )
 }
+const IconsData=(props)=>{
+  const {value}=props
+  const {color,icon,text}=value
+  return <div style={{backgroundColor:color}} className='diffStyle'>
+      <img src={icon} alt={text} className='icon'/>
+      <p style={{color:'black', fontSize:'15px',fontWeight:'300'}}>{text}</p>
+  </div>
+}
 const cardList=[
     {url:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690347293/step1_iujeon.png',
      h1:'Web Development',
@@ -130,6 +138,45 @@ color:'#f05513'},
 content:'Website Design & Development',
 imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690373489/fouthcard3_atmsjm.png',
 color:'#8048ab'}
+]
+const iconsList=[
+  {color:'#40cef5',
+   icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379341/icon1_jaul9d.png',
+   text:'Social Media'},
+   {color:'#fccc6a',
+   icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379347/icon22_d8wcod.png',
+   text:'Manufacturing Industry'},
+   {color:'#93f3fa',
+   icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379352/icon33_r1w1rx.png',
+   text:'Online Shopping'},
+   {color:'#d4995f',
+   icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379358/icon44_bka9g4.png',
+   text:'Dental Health Care'},
+   {color:'#d7fa75',
+   icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379363/icon55_xbhzx4.png',
+   text:'Hospitality'},
+   {color:'#f59dbe',
+   icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379373/icon66_io3oq6.png',
+   text:'Enterprise Service'},
+   {color:'#f59def',
+   icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379383/icon77_cbsafk.png',
+   text:'Educational Industry'},
+   {color:'#c99df5',
+   icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379390/icon88_uwz6ts.png',
+   text:'Corporate & Enterprise'},
+   {color:'#9dc0f5',
+   icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379397/icon99_kpnjyv.png',
+   text:'Health Care'},
+   {color:'#9de8f5',
+   icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379406/icon10_m2k9hf.png',
+   text:'Event Management'},
+   {color:'#e0bf9f',
+   icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379412/icon11_kdyyvs.png',
+   text:'Food & Restaurant'},
+   {color:'#93f3fa',
+   icon:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690379420/icon12_ijfdqq.png',
+   text:'Consultancy'},
+   
 ]
 class Home extends Component{
 render(){
@@ -212,6 +259,21 @@ render(){
             <h1 className='first-title bold' style={{color:'black',fontWeight:'800',fontSize:'30px'}}>Get Your Free <span className='spanBold' style={{color:'GrayText'}}>Customized Quotation</span></h1>
             <button type='button' className='first-but'>Today <span>&gt;</span></button>
            </div>
+      </div>
+      <div className='addPadding color-blue align-center' style={{paddingTop:'40px;'}}>
+        <p className='firAni'>SERVICE TESTIMONIALS</p>
+        <h1 className='first-title'>Client Testimonials</h1>
+        <p className='color-white'>Check out what our happy customers say.</p>
+      </div> 
+      <div className='flex'>
+        <div className='wrap1'>
+          <p className='firAni'>INDUSTRIES WE WORKED FOR</p>
+          <h1 className='voilet-color'>Helping Businesses in All Domains</h1>
+          <p className='part2-para'>Successfully delivered digital products and solutions to a wide variety of industries.</p>
+        </div>
+        <div className='sec-card-container wrap2'>
+          {iconsList.map(item=><IconsData key={item.color} value={item}/>)}
+        </div>
       </div>
     </div>
     <Navbar/>
