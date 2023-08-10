@@ -3,6 +3,7 @@ import {BiSolidPhoneCall,BiLogoTwitter,BiSolidLocationPlus} from 'react-icons/bi
 import {AiOutlineInstagram,AiFillCaretRight,AiTwotoneMail} from 'react-icons/ai'
 import {BsWhatsapp,BsFacebook,BsLinkedin,BsYoutube} from 'react-icons/bs'
 import Navbar from '../Navbar'
+import MoveBar from '../SlideBar'
 import './index.css'
 
 const Cards=(props)=>{
@@ -64,6 +65,15 @@ const IconsData=(props)=>{
   </div>
 }
 
+const firstCardsList=[
+  {id:'card1', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297399/card1_yslwig.png'},
+  {id:'card2', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297437/card2_dhhect.png'},
+  {id:'card3', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297459/card3_ai0frm.png'},
+  {id:'card4', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297476/card4_ff4w7u.png'},
+  {id:'card5', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297494/card5_pz2bkt.png'},
+  {id:'card6', imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690297513/card6_uoqezh.png'},
+
+]
 const cardList=[
     {url:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690347293/step1_iujeon.png',
      h1:'Web Development',
@@ -246,6 +256,7 @@ render(){
         <p className='first-para'>Digital IT Sollutions for Transforming and innovating Businesses.</p>
         <button type='button' className='first-but'>View Portfolio <span>&gt;</span></button>
     </div>
+    <MoveBar classValue='marquee-container1' list={firstCardsList}/>
     </div>
     </div>
     <div id='section2'>
