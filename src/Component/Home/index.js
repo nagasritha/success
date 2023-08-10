@@ -19,7 +19,39 @@ const Cards=(props)=>{
     </div>
 
   }
-
+const DisplayImage=(props)=>{
+    const {image}=props 
+  return <div>
+    <img src={image} alt='logos' className='circularStyle'/>
+  </div>
+  }
+const SecondCardStyle=(props)=>{
+  const {itemDetails}=props
+  const {imageUrl,heading,content}=itemDetails
+  return (
+    <div className='sec-card card'>
+      <img src={imageUrl} alt='heading' className='sec-icon'/>
+      <div className='align-left'>
+        <h1>{heading}</h1>
+        <p className='sec-para'>{content}</p>
+      </div>
+    </div>
+  )
+} 
+const FourthCardStyle=(props)=>{
+  const {itemDetails}=props
+  const {color,imageUrl,heading,content}=itemDetails
+  return (
+    <div className='fourth-card' style={{backgroundColor:color, color:'#ffffff'}}>
+      
+      <div className='align-left'>
+        <p className='sec-para'>{heading}</p>
+        <h1>{content}</h1>
+      </div>
+      <img src={imageUrl} alt='heading' className='fourth-icon'/>
+    </div>
+  )
+}
 const cardList=[
     {url:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690347293/step1_iujeon.png',
      h1:'Web Development',
@@ -52,6 +84,53 @@ const cardList=[
     classValue:'bgcolor5'
   }
   ]
+const imageUrls=['https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690355007/php_fvtsul.png','https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690355017/icon2_bfwrpb.png','https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690355022/icon3_nv3iaz.png','https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690355029/icon4_picdo1.png','https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690355036/icon5_oseiuz.png','https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690355043/icon6_amfzsf.png','https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690355060/icon7_hdilek.png','https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690355108/ison8_lxmuc4.png',]
+const secondCardList=[
+  {imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690358605/sec1_gic1fe.png',
+heading:'Trustworthy Service',
+content:'We work to serve you so that you can make your business stronger.'},
+
+{imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690358609/sec2_kvktqo.png',
+heading:'Dedicated Manager and Team',
+content:'We assign a manager and a team to your project for better and perfect results.'},
+
+{imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690358615/sec3_jlqdr8.png',
+heading:'Technical Proficiency',
+content:'Our Team is highly proficient in the technology they use. They believe in understanding technology to a deeper level.'},
+
+{imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690358619/sec4_dnyjep.png',
+heading:'Customer Friendly',
+content:'We listen to your problems with the utmost professionalism and friendly nature.'},
+
+{imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690358625/sec5_bawc46.png',
+heading:'Timely reports',
+content:'We give you knowledge about your project progress timely and communicate regarding the same.'},
+
+{imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690358631/sec6_ixlrxb.png',
+heading:'Punctuality',
+content:'The best delivered in time is our prime focus to increase satisfaction and trust. For us, time is the key!'},
+
+]
+const FourthList=[
+  {heading:'DESIGN',
+    content:'Graphic Designing and Branding',
+  imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690373476/fourthcard_f8vz8g.png',color:'#1360f0'},
+ 
+  {heading:'APPLICATION',
+  content:'Application Based Software',
+  imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690373482/fourthcard2_ikl5ao.png',
+  color:'#f01343'},
+
+{heading:'SEO',
+content:'Search Engine Optimization',
+imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690373509/fouthcard4_fcaqdw.png',
+color:'#f05513'},
+
+{heading:'WEB DESIGN',
+content:'Website Design & Development',
+imageUrl:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690373489/fouthcard3_atmsjm.png',
+color:'#8048ab'}
+]
 class Home extends Component{
 render(){
     return (
@@ -109,6 +188,30 @@ render(){
                 the best quality of service.</p>
         </div>
         {cardList.map(item=><Cards itemDetails={item} key={item.h1}/>)}
+      </div>
+      <div className='flex-item'>{imageUrls.map(item=><DisplayImage image={item}/>)}</div>
+      <div className='addPadding color-blue align-center'>
+           <p className='firAni'>WE DELIVER OUR BEST</p>
+           <h1 className='first-title'>WE DELIVER OUR BEST</h1>
+           <p className='color-white'>We are the best at what we do.</p>
+           <div className='sec-card-container'>
+            {secondCardList.map(item=><SecondCardStyle itemDetails={item} key={item.heading}/>)}
+           </div>
+           <div className='flex-item'>
+            <h1 className='first-title bold'>Want to <span className='spanBold'>start a</span> new project?</h1>
+            <button type='button' className='first-but'>Enquire Now <span>&gt;</span></button>
+           </div>
+      </div>
+      <div className='white-container'>
+         <p className='firAni'>OUR EXCELLENCE</p>
+         <h1 className='voilet-color'>Our Key Expertise Areas</h1>
+        <div className='sec-card-container'>
+          {FourthList.map(item=><FourthCardStyle key={item.heading} itemDetails={item}/>)}
+        </div>
+        <div className='flex-item' style={{paddingBottom:'25px;'}}>
+            <h1 className='first-title bold' style={{color:'black',fontWeight:'800',fontSize:'30px'}}>Get Your Free <span className='spanBold' style={{color:'GrayText'}}>Customized Quotation</span></h1>
+            <button type='button' className='first-but'>Today <span>&gt;</span></button>
+           </div>
       </div>
     </div>
     <Navbar/>
