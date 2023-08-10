@@ -60,6 +60,7 @@ const IconsData=(props)=>{
       <p style={{color:'black', fontSize:'15px',fontWeight:'300'}}>{text}</p>
   </div>
 }
+
 const cardList=[
     {url:'https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690347293/step1_iujeon.png',
      h1:'Web Development',
@@ -178,8 +179,61 @@ const iconsList=[
    text:'Consultancy'},
    
 ]
+
+
+let count1=null
+let count2=null
+let count3=null
+let count4=null
+
 class Home extends Component{
+state={
+  happyClients:0,
+  projects:0,
+  experience:0,
+  farginProjects:0}
+
+ componentDidMount(){
+  this.count()
+ }
+
+count=()=>{
+  count1=setInterval(this.count1Func,100)
+  count2=setInterval(this.count2Func,100)
+  count3=setInterval(this.count3Func,100)
+  count4=setInterval(this.count4Func,100)
+}
+
+count1Func=()=>{
+  const {happyClients}=this.state
+  if(happyClients===200){
+    return clearInterval(count1)
+  }return this.setState(prev=>({happyClients:prev.happyClients+1}))
+}
+
+count2Func=()=>{
+  const {projects}=this.state
+  if(projects===500){
+    return clearInterval(count2)
+  }return this.setState(prev=>({projects:prev.projects+1}))
+}
+
+count3Func=()=>{
+  const {experience}=this.state
+  if(experience===3){
+    return clearInterval(count3)
+  }return this.setState(prev=>({experience:prev.experience+1}))
+}
+
+count4Func=()=>{
+  const {farginProjects}=this.state
+  if(farginProjects===5){
+    return clearInterval(count4)
+  }return this.setState(prev=>({farginProjects:prev.farginProjects+1}))
+}
+
 render(){
+  const {happyClients,projects,experience,farginProjects}=this.state
     return (
    <div>
     <div id='section1'>
@@ -273,6 +327,36 @@ render(){
         </div>
         <div className='sec-card-container wrap2'>
           {iconsList.map(item=><IconsData key={item.color} value={item}/>)}
+        </div>
+      </div>
+      <div className='addPadding color-blue align-center' style={{display:'flex',flexWrap:'wrap',justifyContent:'center'}}>
+        <div style={{display:'flex',alignItems:'center', marginRight:'25px'}}>
+          <img src='https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690382262/last1_m0y5o9.png' alt='num' className='lastIcon'/>
+          <div className='align-left' style={{marginLeft:'10px'}}>
+            <h1 className='first-title'>{`${happyClients}+`}</h1>
+            <p className='color-white'>Happy clients</p>
+          </div>
+        </div>
+        <div style={{display:'flex',alignItems:'center', marginRight:'25px'}}>
+          <img src='https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690382265/last2_vdv1nc.png' alt='num' className='lastIcon'/>
+          <div className='align-left' style={{marginLeft:'10px'}}>
+            <h1 className='first-title'>{`${projects}+`}</h1>
+            <p className='color-white'>Projects Done</p>
+          </div>
+        </div>
+        <div style={{display:'flex',alignItems:'center', marginRight:'25px'}}>
+          <img src='https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690382269/last3_enkzhp.png' alt='num' className='lastIcon'/>
+          <div className='align-left' style={{marginLeft:'10px'}}>
+            <h1 className='first-title'>{`${experience}+`}</h1>
+            <p className='color-white'>Years Served</p>
+          </div>
+        </div>
+        <div style={{display:'flex',alignItems:'center', marginRight:'25px'}}>
+          <img src='https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690382275/last4_t5br0n.png' alt='num' className='lastIcon'/>
+          <div className='align-left' style={{marginLeft:'10px'}}>
+            <h1 className='first-title'>{`${farginProjects}+`}</h1>
+            <p className='color-white'>Foreign Projecta</p>
+          </div>
         </div>
       </div>
     </div>
