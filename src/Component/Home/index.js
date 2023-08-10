@@ -86,9 +86,11 @@ render(){
                <img src='https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690305573/part-2_ourncr.png' alt='part2' className='right-align'/>
             </div>
       </div>
+      <div className='overCenter'>
       <div className='overLapingelement'>
-        <p className='para-line'>Need <span className='spanedColor'>'Solutions to all your business Complications?'</span></p>
+        <p className='para-line'>Need <span className='spanedColor'> Solutions to all your business Complications?</span></p>
         <button type='button' className='third-but'>Get in Touch</button>
+      </div>
       </div>
       <div className='addPadding color-blue align-center'>
            <p className='firAni'>WE ARE INNOVATIVE SOLLUTION PROVIDERS</p>

@@ -101,8 +101,12 @@ margin:0px;
     margin-left:15px;
     min-height:40px;
     max-height:55px;
+}  
+.overCenter{
+    display:grid;
+    place-items:center;
 }
-  .overLapingelement{
+.overLapingelement{
     background-color:#ffffff;
     border-radius:20px;
     color:Black;
@@ -110,6 +114,7 @@ margin:0px;
     margin-bottom:-40px;
     height:60px;
     display:flex;
+    width:50%;
     justify-content:center;
     align-items:center;
   }
@@ -145,15 +150,25 @@ margin:0px;
     font-size:20px;
     background-color: #ffffff;
     border-radius:10px;
+    white-space: nowrap;
 }
-.spanedColor{
- color:orangered;
- margin-left:5px;
- margin-top:-20px;
- display:flex;
- flex-wrap:wrap;
- flex-grow:0;
-}
+.spanedColor {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(30, end);
+    animation-fill-mode: forwards;
+    color:chocolate;
+    animation-iteration-count:infinite ;
+    margin-left:5px;
+  }
+    
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
 .cardsContainer{
     display:flex;
     flex-direction:row;
@@ -178,7 +193,7 @@ margin:0px;
     font-family:'Roboto';
     border-right: 2px solid transparent; 
     opacity: 0; 
-    animation: entrance 1s forwards;
+    animation: entrance 3s forwards;
     margin-left:10px;
     margin-bottom:15px;
     padding:25px;
