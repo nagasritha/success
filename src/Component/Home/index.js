@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import {BiSolidPhoneCall} from 'react-icons/bi'
 import Navbar from '../Navbar'
 import './index.css'
 
@@ -358,6 +359,33 @@ render(){
             <p className='color-white'>Foreign Projecta</p>
           </div>
         </div>
+      </div>
+      <div>
+        <div style={{display:'flex',justifyContent:'space-between'}}>
+          <h1 className='buttonType'>Webingo was featured on</h1>
+          <img src='https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690443126/announcement_a1v4n9.png' className='toggle' alt='toggle'/>
+        </div>
+      </div>
+      <div className='column-style'>
+           <p className='firAni'>LET’S BUILD SOMETHING TOGETHER</p>
+           <h1 className='voilet-color'>Our Pleasure is to listen to your requirements</h1>
+           <button type='button' className='trans-button'>Estimate Project <span>&gt;</span></button>
+           <div style={{display:'flex', alignItems:'center'}}>
+            <p style={{marginRight:'10px'}}>Or call us now</p>
+            <p className='firAni'><BiSolidPhoneCall/>8001-81-1234</p>
+           </div>
+      </div>
+      <div className='item10'>
+        <div>
+          <h1 className='voilet-color'>Stay Tuned with us:</h1>
+          <p style={{color:'GrayText'}}>Get WebInGo news and announcements delivered
+           right to your inbox.</p>
+        </div>
+        <div>
+          <input type='text' placeholder='Enter Your Address'/>
+          <button type='button' className='item10-but'>Subscribe <span>&gt;</span></button>
+        </div>
+     
       </div>
     </div>
     <Navbar/>
