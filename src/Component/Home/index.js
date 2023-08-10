@@ -1,5 +1,7 @@
 import { Component } from 'react'
-import {BiSolidPhoneCall} from 'react-icons/bi'
+import {BiSolidPhoneCall,BiLogoTwitter,BiSolidLocationPlus} from 'react-icons/bi'
+import {AiOutlineInstagram,AiFillCaretRight,AiTwotoneMail} from 'react-icons/ai'
+import {BsWhatsapp,BsFacebook,BsLinkedin,BsYoutube} from 'react-icons/bs'
 import Navbar from '../Navbar'
 import './index.css'
 
@@ -385,8 +387,130 @@ render(){
           <input type='text' placeholder='Enter Your Address'/>
           <button type='button' className='item10-but'>Subscribe <span>&gt;</span></button>
         </div>
-     
       </div>
+      <div className='middle-page'>
+        <div style={{width:'200px'}}>
+          <h1>About Webingo Infotech Solutions LLP</h1>
+          <p>End-to-End IT Solutions and business consultation provider</p>
+          <button type='button' className='first-but'>Pay Us Online <span>&gt;</span></button>
+          <p>We Accept :</p>
+          <img src='https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690390349/opions_ough8p.png' alt='payment'/>
+        </div>
+        <div style={{width:'200px'}}>
+          <h1>Contact Us</h1>
+               <div className='row'>
+                        <AiTwotoneMail className='bullet' style={{fontSize:'40px', marginRight:'10px'}}/>
+                        <div>
+                          <h1>Email</h1>
+                          <p>info@webingo.in</p>
+                        </div>
+                    </div>
+                <div className='row'>
+                        <BiSolidPhoneCall style={{fontSize:'40px', marginRight:'10px'}} className='bullet'/>
+                        <div>
+                          <h1>Phone</h1>
+                          <p>(+91) 8001-81-1234</p>
+                        </div>
+                    </div>
+                    <div className='row'>
+                        <BiSolidLocationPlus style={{fontSize:'40px', marginRight:'10px'}} className='bullet'/>
+                        <div>
+                          <h1>Address</h1>
+                          <p>7th Floor, Monibhandar Building Webel Bhavan Premises, Sector V, Ring Rd, Bidhannagar, West Bengal 700091</p>
+                        </div>
+                    </div>
+        </div>
+        <div style={{width:'200px'}}>
+          <h1>Quick link</h1>
+            <div className='row' >
+                <AiFillCaretRight className='bullet'/>
+                <p className='item'>Seo</p>
+              </div>
+              <div className='row' >
+                <AiFillCaretRight className='bullet'/>
+                <p className='item'>Logo Design</p>
+              </div>
+              <div className='row' >
+                <AiFillCaretRight className='bullet'/>
+                <p className='item'>Graphic Design</p>
+              </div>
+              <div className='row' >
+                <AiFillCaretRight className='bullet'/>
+                <p className='item'>App Development</p>
+              </div>
+              <div className='row' >
+                <AiFillCaretRight className='bullet'/>
+                <p className='item'>Bulk Sms</p>
+              </div>
+              <div className='row' >
+                <AiFillCaretRight className='bullet'/>
+                <p className='item'>Content Writting</p>
+              </div>
+              <div className='row' >
+                <AiFillCaretRight className='bullet'/>
+                <p className='item'>Sitemap</p>
+              </div>
+        </div>
+        <div style={{width:'200px'}}>
+          <h1>Company</h1>
+            <div className='row' >
+                <AiFillCaretRight className='bullet'/>
+                <p className='item'>Contact Us</p>
+              </div>
+              <div className='row' >
+                <AiFillCaretRight className='bullet'/>
+                <p className='item'>About us</p>
+              </div>
+              <div className='row' >
+                <AiFillCaretRight className='bullet'/>
+                <p className='item'>Our Achievements</p>
+              </div>
+              <div className='row' >
+                <AiFillCaretRight className='bullet'/>
+                <p className='item'>Payment Policy</p>
+              </div>
+              <div className='row' >
+                <AiFillCaretRight className='bullet'/>
+                <p className='item'>Privacy policy</p>
+              </div>
+              <div className='row' >
+                <AiFillCaretRight className='bullet'/>
+                <p className='item'>Terms and Conditions</p>
+              </div>
+              <div className='row' >
+                <AiFillCaretRight className='bullet'/>
+                <p className='item'>License & Copyright</p>
+              </div>
+              <div className='row' >
+                <AiFillCaretRight className='bullet'/>
+                <p className='item'>Refund Polocy</p>
+              </div>
+            </div>
+      </div>
+      <div className='item11'>
+        <div>
+          <h1 style={{color:'black'}}>India's Most Reliable IT Solution Company</h1>
+          <p style={{color:'GrayText'}}>Acclaimed, Certified and Reviewed by some biggest names and organisations.</p>
+        </div>
+        <div>
+          <img src='https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690388245/long_lxihmr.png' alt='long' className='long'/>
+        </div>
+        
+      </div>
+      <div className='last-info-container'>
+          <div className='socialLogos'>
+            <BsFacebook style={{fontSize:'35px' ,marginRight:'20px'}}/>
+            <BiLogoTwitter style={{fontSize:'35px', marginRight:'20px'}}/>
+            <AiOutlineInstagram style={{fontSize:'35px', marginRight:'20px'}}/>
+            <BsLinkedin style={{fontSize:'35px', marginRight:'20px'}}/>
+            <BsYoutube style={{fontSize:'35px', marginRight:'20px'}}/>
+            <BsWhatsapp style={{fontSize:'35px', marginRight:'20px'}}/>
+            <AiTwotoneMail style={{fontSize:'35px', marginRight:'20px'}}/>
+          </div>
+          <p>Copyright © 2017-23 Webingo. All rights reserved.</p>
+          <img src='https://res.cloudinary.com/dwoqcvsxt/image/upload/v1690389557/lastImage_zzl0kr.png' alt='lastImage' className='lastImage'/>
+      </div>
+      <a href='#section1'><button className='navigate' type='button'>go up</button></a> 
     </div>
     <Navbar/>
    </div>
